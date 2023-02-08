@@ -27,39 +27,27 @@ globalStyle("p", {
   color: "#FFFFFF"
 });
 
-export const P10 = style({
-  padding: 10
+globalStyle("a", {
+  color: "#FFFFFF",
+  textDecoration: "none"
 });
 
-export const TextBox = style([
-  P10,
-  {
-    maxWidth: 600,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    flexFlow: "row",
-    backgroundColor: ""
-  }
-]);
+export const FlexRowCenterStart = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  flexFlow: "row"
+});
 
-export const AppFrame = style({
+export const FlexColCenterStart = style({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "flex-start",
-  height: "100vh"
+  justifyContent: "flex-start"
 });
 
-export const Content = style({
-  backgroundColor: "#2A2B2DFF",
-  width: "100%",
-  height: "100%",
-  display: "flex",
-  justifyContent: "flex-start",
-  alignItems: "center",
-  flexFlow: "column",
-  padding: 12
+export const P10 = style({
+  padding: 10
 });
 
 export const H1 = style({
@@ -68,3 +56,32 @@ export const H1 = style({
   fontWeight: 700,
   margin: 0
 });
+
+export const TextBox = style([
+  P10,
+  FlexRowCenterStart,
+  {
+    maxWidth: 600,
+    backgroundColor: "#15171a",
+    color: "#FFFFFF",
+    borderRadius: 8
+  }
+]);
+
+export const AppFrame = style([
+  FlexColCenterStart,
+  {
+    height: "100vh"
+  }
+]);
+
+export const Content = style([
+  FlexColCenterStart,
+  {
+    backgroundColor: "#2A2B2DFF",
+    width: "100%",
+    height: "100%",
+    padding: 12,
+    gap: 24
+  }
+]);

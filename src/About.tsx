@@ -1,5 +1,6 @@
 import React from "react";
 import { Content, TextBox, H1 } from "./styles.css";
+import { VanillaLogo } from "./vanilla-logo";
 
 export const About = () => {
   return (
@@ -15,6 +16,7 @@ export const About = () => {
         TypeScript. There are 237 other projects using @vanilla-extract/css in
         the npm registry.
       </div>
+      <VanillaLogo />
     </div>
   );
 };
